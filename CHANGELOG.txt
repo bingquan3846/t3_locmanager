@@ -1,0 +1,28 @@
+CHANGELOG
+
+22.01.2007:		Initial prototype
+02.03.2007:		BUGFIX: Fixed import inconsistencies (entitity problems) => still alpha
+04.04.2007:		Code cleaning, running under SLES 9, TYPO3 v 4.0.4, PHP 4.3.4 => moved to beta
+05.04.2007:		BUGFIX: Corrected pattern in link substitution to match internal, external, file and mail links + optional attributes (Thanks to Wolfgang Klinger)
+10.04.2007:		BUGFIX: Freed XML parser too early, resulted in n- th content element not being imported and XML parser error
+11.04.2007:		BUGFIX: Corrected pattern in link substitution (Thanks to Wolfgang Klinger again)
+			ADD: German user interface
+16.04.2007:		BUFIX: Changed path to download dir in link to localization package (Export and Localisation information function). Before package could not be downloaded if Typo3 was not installed in webserver's document root. Successfully tested on a fresh install v 4.1.1
+			BUGFIX: Substitution of & => &amp;
+17.04.2007:		BUGFIX: Disappearing links on export/tidy bug. Changed LINK substitution for export, tags in localization format are now named <a name="989" target="_top" type="internal-link" title="Some text">bla</a>. Now tidy successfully cleans bodytext sections.
+20.04.2007:		UPDATE: Documentation
+23.04.2007:		ADD: Spanish user interface
+24.04.2007:		BUGFIX: Content element selection on export fixed.
+			BUGFIX: Icon paths now with t3lib_iconWorks
+			ADD: French user interface
+			CHANGE: Functions reordered
+			ADD: Export now PHP5 compatible on Linux and Windows
+			NOTE: Compatibility with Windows not main priority anymore
+25.05.2007:		BUGFIX:	TIDY function call now PHP5 compatible
+			ADD: Import function replace_content now PHP5 compatible
+16.8.2007:		BUGFIX: When overwriting pages was activated no new pages were inserted.
+17.8.2007:		BUGFIX: After import unwanted linebreaks so additional <p>-tags got inserted breaking layout. Only appeared when exporting with tidy (nice print ****)
+			BUGFIX: Removing all content elements now takes precedence over substitution! Before, when checking Overwrite and Remove all option, remove was not performed 
+26.02.2008:		BUGFIX: Charset problems prevented UTF-8 characters not included in Latin charsets from being displayed correctly. Now using TYPO3 functions for bodytext transformations (LINK, BR, ...)
+26.02.2008:		BUGFIX: Now PHP5 compatible.
+27.02.2008:		BUGFIX: Tidy call in PHP5 now using UTF-8 by default.

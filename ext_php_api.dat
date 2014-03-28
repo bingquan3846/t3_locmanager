@@ -1,0 +1,188 @@
+a:2:{s:4:"meta";a:3:{s:5:"title";s:0:"";s:5:"descr";s:0:"";s:7:"options";a:2:{s:10:"usageCount";N;s:19:"includeCodeAbstract";N;}}s:5:"files";a:6:{s:14:"MD5_30552972c9";a:4:{s:8:"filename";s:29:"class.tx_t3locmanager_cm1.php";s:8:"filesize";i:2820;s:6:"header";a:5:{s:4:"text";s:39:"
+
+Addition of an item to the clickmenu
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}s:5:"other";a:1:{i:0;s:57:"@author	Daniel Zielinski <d.zielinski@mx.uni-saarland.de>";}s:11:"other_index";a:1:{s:7:"@author";a:1:{i:0;s:49:"Daniel Zielinski <d.zielinski@mx.uni-saarland.de>";}}}s:3:"DAT";a:2:{i:1;a:5:{s:6:"header";s:27:"class tx_t3locmanager_cm1 {";s:5:"class";i:1;s:11:"parentClass";s:19:"tx_t3locmanager_cm1";s:4:"cDat";a:5:{s:4:"text";s:41:"
+
+Addition of an item to the clickmenu
+
+
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}s:5:"other";a:1:{i:0;s:57:"@author	Daniel Zielinski <d.zielinski@mx.uni-saarland.de>";}s:11:"other_index";a:1:{s:7:"@author";a:1:{i:0;s:49:"Daniel Zielinski <d.zielinski@mx.uni-saarland.de>";}}}s:6:"atLine";i:27;}i:3;a:7:{s:6:"header";s:22:"function includeLL()	{";s:11:"parentClass";s:19:"tx_t3locmanager_cm1";s:4:"cDat";a:3:{s:4:"text";s:91:"
+
+Includes the [extDir]/locallang.php and returns the $LOCAL_LANG array found in that file.";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}}s:7:"content";s:0:"";s:12:"content_size";i:330;s:13:"content_lines";i:11;s:6:"atLine";i:76;}}}s:14:"MD5_71e6affeaf";a:4:{s:8:"filename";s:30:"class.tx_t3locmanager_main.php";s:8:"filesize";i:58162;s:6:"header";a:5:{s:4:"text";s:34:"
+
+Functions used in t3_locManager
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}s:5:"other";a:1:{i:0;s:57:"@author	Daniel Zielinski <d.zielinski@mx.uni-saarland.de>";}s:11:"other_index";a:1:{s:7:"@author";a:1:{i:0;s:49:"Daniel Zielinski <d.zielinski@mx.uni-saarland.de>";}}}s:3:"DAT";a:31:{i:1;a:7:{s:6:"header";s:49:"class tx_t3locmanager_main extends t3lib_SCbase {";s:5:"class";i:1;s:11:"parentClass";s:20:"tx_t3locmanager_main";s:7:"content";s:0:"";s:12:"content_size";i:3;s:13:"content_lines";i:1;s:6:"atLine";i:31;}i:3;a:7:{s:6:"header";s:82:"function getListOfSubpages($doktypes, $hidden, $id, $depth, $recursionLevel = 0) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:243:"
+
+Generates a list of Page-uids from $id. List does include $id itself
+The only pages WHICH PREVENTS DECENDING in a branch are
+   - deleted pages,
+   - hidden pages if options set to Ignore hidden pages,
+   - pages of an unsupported page type
+";s:5:"param";a:5:{i:0;a:2:{i:0;s:7:"integer";i:1;s:74:"$id: The id of the start page from which point in the page tree to decend.";}i:1;a:2:{i:0;s:7:"integer";i:1;s:137:"$depth: The number of levels to decend. If you want to decend infinitely, just set this to 100 or so, because 100 is almost infinity, eh?";}i:2;a:2:{i:0;s:5:"array";i:1;s:91:"Array of IDs from previous recursions. In order to prevent infinite loops with mount pages.";}i:3;a:2:{i:0;s:7:"integer";i:1;s:76:"Internal: Zero for the first recursion, incremented for each recursive call.";}i:4;a:2:{i:0;s:6:"[type]";i:1;s:20:"$recursionLevel: ...";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:29:"Returns an array of page uids";}}s:7:"content";s:0:"";s:12:"content_size";i:1653;s:13:"content_lines";i:52;s:6:"atLine";i:47;}i:5;a:7:{s:6:"header";s:33:"function getVersionsOfPage($id) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:34:"
+
+Check for supported pages types
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:7:"integer";i:1;s:23:"$id: The id of the page";}i:1;a:2:{i:0;s:5:"array";i:1;s:33:"Array of IDs that passed the test";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:29:"Returns an array of page uids";}}s:7:"content";s:0:"";s:12:"content_size";i:476;s:13:"content_lines";i:15;s:6:"atLine";i:107;}i:7;a:7:{s:6:"header";s:50:"function exportCeData($params,$affectedPagesArr) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:42:"
+
+Export localizable data from tt_content
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:5:"array";i:1;s:63:"$params: Array of parameters (id,hidden,recursion,locPages,...)";}i:1;a:2:{i:0;s:5:"array";i:1;s:45:"$affectedPagesArr: Array of affected page IDs";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:110:"$out: Returns an array of two arrays: $out[0]=Messages to be printed out, $out[1]=affected content element IDs";}}s:7:"content";s:0:"";s:12:"content_size";i:2334;s:13:"content_lines";i:61;s:6:"atLine";i:130;}i:9;a:7:{s:6:"header";s:53:"function exportPagesData($params,$affectedPagesArr) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:51:"
+
+Export localizable data from table pages to file
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:5:"array";i:1;s:63:"$params: Array of parameters (id,hidden,recursion,locPages,...)";}i:1;a:2:{i:0;s:5:"array";i:1;s:45:"$affectedPagesArr: Array of affected page IDs";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:175:"$out: Returns an array of two arrays: $out[0]=Messages to be printed out, $out[1]=affected page IDs, $out['errorMsg']= error messages, $out['files']=filename for later zipping";}}s:7:"content";s:0:"";s:12:"content_size";i:1097;s:13:"content_lines";i:32;s:6:"atLine";i:199;}i:11;a:7:{s:6:"header";s:28:"function pageIsHidden($id) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:33:"
+
+Check whether a page is hidden
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:12:"$id: page ID";}}s:6:"return";a:2:{i:0;s:7:"integer";i:1;s:23:"$hidden: Returns 0 or 1";}}s:7:"content";s:0:"";s:12:"content_size";i:251;s:13:"content_lines";i:9;s:6:"atLine";i:238;}i:13;a:7:{s:6:"header";s:29:"function printOpts($params) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:40:"
+
+Prints XHTML form with export options
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:5:"array";i:1;s:26:"$params: export parameters";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:34:"$form: Returns the XHTML form code";}}s:7:"content";s:0:"";s:12:"content_size";i:8888;s:13:"content_lines";i:202;s:6:"atLine";i:254;}i:15;a:7:{s:6:"header";s:35:"function printImportOpts($params) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:40:"
+
+Prints XHTML form with import options
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:5:"array";i:1;s:26:"$params: export parameters";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:34:"$form: Returns the XHTML form code";}}s:7:"content";s:0:"";s:12:"content_size";i:2874;s:13:"content_lines";i:59;s:6:"atLine";i:463;}i:17;a:7:{s:6:"header";s:55:"function subtractLocPages($affectedPagesArr, $params) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:55:"
+
+Subtract already localized pages from affected pages
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:5:"array";i:1;s:27:"$affectedPagesArr: page IDs";}i:1;a:2:{i:0;s:5:"array";i:1;s:26:"$params: Export parameters";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:38:"$out: IDs of still not localized pages";}}s:7:"content";s:0:"";s:12:"content_size";i:891;s:13:"content_lines";i:23;s:6:"atLine";i:530;}i:19;a:7:{s:6:"header";s:43:"function sysLang2Iso2Letter ($sysLangUid) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:41:"
+
+Get ISO-2-Letter code for sys_language
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:6:"string";i:1;s:22:"$sysLangUid as it says";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:27:"$xmlLang: ISO-2-Letter code";}}s:7:"content";s:0:"";s:12:"content_size";i:354;s:13:"content_lines";i:7;s:6:"atLine";i:560;}i:21;a:7:{s:6:"header";s:32:"function tidy ($dirty,$params) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:66:"
+
+Clean dirty X/HTML from database
+Requires tidy support for PHP!
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:6:"string";i:1;s:28:"$dirty: string to be cleaned";}i:1;a:2:{i:0;s:5:"array";i:1;s:17:"$params: settings";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:26:"$clean: Clean XHTML string";}}s:7:"content";s:0:"";s:12:"content_size";i:474;s:13:"content_lines";i:19;s:6:"atLine";i:576;}i:23;a:7:{s:6:"header";s:32:"function getFieldInfo ($table) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:17:"
+
+Get table info
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:6:"string";i:1;s:21:"$table: Name of table";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:32:"$fieldInfoArr: Table information";}}s:7:"content";s:0:"";s:12:"content_size";i:363;s:13:"content_lines";i:10;s:6:"atLine";i:602;}i:25;a:7:{s:6:"header";s:53:"function getLocData ($params, $affectedArr, $table) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:42:"
+
+Get localizable data from tables in XML
+";s:5:"param";a:3:{i:0;a:2:{i:0;s:5:"array";i:1;s:45:"$affectedArr: page IDs or content element IDs";}i:1;a:2:{i:0;s:5:"array";i:1;s:26:"$params: export parameters";}i:2;a:2:{i:0;s:6:"string";i:1;s:18:"$table: table name";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:87:"$out['filename']: filename of temp XML file, $out['errorMsg']: if temp file not written";}}s:7:"content";s:0:"";s:12:"content_size";i:5495;s:13:"content_lines";i:128;s:6:"atLine";i:621;}i:27;a:7:{s:6:"header";s:65:"function mkSdlIni($fieldInfoArr,$locFields,$cDataFields,$table) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:15:"
+
+Make SDL INI
+";s:5:"param";a:4:{i:0;a:2:{i:0;s:5:"array";i:1;s:45:"$fieldInfoArr: Information about table fields";}i:1;a:2:{i:0;s:5:"array";i:1;s:36:"$locFields: Localisable table fields";}i:2;a:2:{i:0;s:5:"array";i:1;s:26:"$params: export parameters";}i:3;a:2:{i:0;s:6:"[type]";i:1;s:11:"$table: ...";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:16:"$sdlIni: SDL ini";}}s:7:"content";s:0:"";s:12:"content_size";i:997;s:13:"content_lines";i:22;s:6:"atLine";i:759;}i:29;a:7:{s:6:"header";s:51:"function mkP6xfg($fieldInfoArr,$locFields,$table) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:24:"
+
+Make PASSOLO XFG rule
+";s:5:"param";a:3:{i:0;a:2:{i:0;s:5:"array";i:1;s:45:"$fieldInfoArr: Information about table fields";}i:1;a:2:{i:0;s:5:"array";i:1;s:36:"$locFields: Localisable table fields";}i:2;a:2:{i:0;s:5:"array";i:1;s:26:"$params: export parameters";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:32:"$p6xfg: XML configuration string";}}s:7:"content";s:0:"";s:12:"content_size";i:2733;s:13:"content_lines";i:50;s:6:"atLine";i:790;}i:31;a:7:{s:6:"header";s:36:"function displaySysLanguageInfo () {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:53:"
+
+Display sys_language information overview in xhtml
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:44:"$sysLanguageInfo: sys_language info in XHTML";}}s:7:"content";s:0:"";s:12:"content_size";i:546;s:13:"content_lines";i:9;s:6:"atLine";i:846;}i:33;a:7:{s:6:"header";s:55:"function displaySysLanguageSelection ($name, $params) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:41:"
+
+Display sys_language selection options
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:6:"string";i:1;s:25:"$name: 'slang' or 'tlang'";}i:1;a:2:{i:0;s:6:"[type]";i:1;s:12:"$params: ...";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:62:"$sysLanguageSelection: sys_language selection options in XHTML";}}s:7:"content";s:0:"";s:12:"content_size";i:1068;s:13:"content_lines";i:25;s:6:"atLine";i:863;}i:35;a:7:{s:6:"header";s:55:"function resolveStaticLangIsocode($staticLangIsocode) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:43:"
+
+Transform static_lang_isocode into iso2l
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:30:"$staticLangIsocode: as it says";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:25:"$iso2l: ISO 2-Letter code";}}s:7:"content";s:0:"";s:12:"content_size";i:260;s:13:"content_lines";i:7;s:6:"atLine";i:895;}i:37;a:7:{s:6:"header";s:36:"function showExportedLocData ($id) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:72:"
+
+Show exported localization data to keep track of localisation process
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:6:"[type]";i:1;s:8:"$id: ...";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:78:"$expInfo: Info on exported data available in uploads/tx_t3locmanager/download/";}}s:7:"content";s:0:"";s:12:"content_size";i:2207;s:13:"content_lines";i:34;s:6:"atLine";i:909;}i:39;a:7:{s:6:"header";s:29:"function modDesc($function) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:36:"
+
+Print module/function description
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:39:"$function: ID of called module function";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:78:"$expInfo: Info on exported data available in uploads/tx_t3locmanager/download/";}}s:7:"content";s:0:"";s:12:"content_size";i:271;s:13:"content_lines";i:11;s:6:"atLine";i:950;}i:41;a:7:{s:6:"header";s:18:"function debug() {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:26:"
+
+Print debug information
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:0:"";i:1;s:0:"";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:52:"$debug: Info on GET and POST vars send to the script";}}s:7:"content";s:0:"";s:12:"content_size";i:189;s:13:"content_lines";i:5;s:6:"atLine";i:968;}i:43;a:7:{s:6:"header";s:31:"function checkParams($params) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:36:"
+
+Check parameters before exporting
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:5:"array";i:1;s:57:"$params: POST/userPrefs params for controlling the export";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:76:"$checkRes: checkRes['0']=Error messages; checkRes['1']=Parameter error (0|1)";}}s:7:"content";s:0:"";s:12:"content_size";i:744;s:13:"content_lines";i:25;s:6:"atLine";i:980;}i:45;a:7:{s:6:"header";s:31:"function checkID($id, $slang) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:54:"
+
+Check if page ID is valid for given source language
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:7:"integer";i:1;s:12:"$id: Page ID";}i:1;a:2:{i:0;s:7:"integer";i:1;s:29:"$slang: ID of source language";}}s:6:"return";a:2:{i:0;s:7:"integer";i:1;s:34:"$err: 0 if page exists 1 otherwise";}}s:7:"content";s:0:"";s:12:"content_size";i:487;s:13:"content_lines";i:18;s:6:"atLine";i:1013;}i:47;a:7:{s:6:"header";s:50:"function htmlReport($params,$report,$archivname) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:52:"
+
+Print report in HTML and write it to download dir
+";s:5:"param";a:3:{i:0;a:2:{i:0;s:5:"array";i:1;s:7:"$params";}i:1;a:2:{i:0;s:6:"string";i:1;s:7:"$report";}i:2;a:2:{i:0;s:6:"[type]";i:1;s:16:"$archivname: ...";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:11:"$htmlreport";}}s:7:"content";s:0:"";s:12:"content_size";i:1352;s:13:"content_lines";i:24;s:6:"atLine";i:1040;}i:49;a:7:{s:6:"header";s:65:"function zipLocPackage($params,$errorMsg,$filename,$archivname) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:16:"
+
+Zip all files
+";s:5:"param";a:4:{i:0;a:2:{i:0;s:5:"array";i:1;s:7:"$params";}i:1;a:2:{i:0;s:6:"string";i:1;s:7:"$report";}i:2;a:2:{i:0;s:6:"[type]";i:1;s:14:"$filename: ...";}i:3;a:2:{i:0;s:6:"[type]";i:1;s:16:"$archivname: ...";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:30:"$out	Error messages and report";}}s:7:"content";s:0:"";s:12:"content_size";i:2235;s:13:"content_lines";i:49;s:6:"atLine";i:1074;}i:51;a:7:{s:6:"header";s:36:"function checkFType($fileArr,$ext) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:17:"
+
+Check filetype
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:5:"array";i:1;s:28:"$fileArr	Files to be checked";}i:1;a:2:{i:0;s:6:"string";i:1;s:19:"$ext	File extension";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:30:"$passed	Files that passed test";}}s:7:"content";s:0:"";s:12:"content_size";i:137;s:13:"content_lines";i:8;s:6:"atLine";i:1131;}i:53;a:7:{s:6:"header";s:45:"function importLocFile($params,$xmlFileArr) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:41:"
+
+Import Localization data from XML file
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:5:"array";i:1;s:25:"$params	Import parameters";}i:1;a:2:{i:0;s:6:"string";i:1;s:22:"$xmlFilesArr	XML files";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:24:"$errorMsg	Error messages";}}s:7:"content";s:0:"";s:12:"content_size";i:9774;s:13:"content_lines";i:225;s:6:"atLine";i:1147;}i:55;a:7:{s:6:"header";s:49:"function replace_content( &$node, $newContent ) {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:36:"
+
+Replace content in XML text nodes
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:6:"object";i:1;s:24:"&$node	Reference to node";}i:1;a:2:{i:0;s:6:"string";i:1;s:28:"$newContent	New node content";}}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}}s:7:"content";s:0:"";s:12:"content_size";i:240;s:13:"content_lines";i:11;s:6:"atLine";i:1380;}i:57;a:7:{s:6:"header";s:48:"function startTag($parser, $name, $attrs)
+     {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:19:"
+
+Parser start tag
+";s:5:"param";a:3:{i:0;a:2:{i:0;s:6:"object";i:1;s:11:"&parser	...";}i:1;a:2:{i:0;s:6:"string";i:1;s:10:"$name		...";}i:2;a:2:{i:0;s:6:"string";i:1;s:11:"$attrs		...";}}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}}s:7:"content";s:0:"";s:12:"content_size";i:118;s:13:"content_lines";i:6;s:6:"atLine";i:1400;}i:59;a:4:{s:6:"header";s:38:"function cdata($parser, $cdata)
+     {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:15:"
+
+Parser cdata
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:6:"object";i:1;s:11:"&parser	...";}i:1;a:2:{i:0;s:6:"string";i:1;s:11:"$cdata		...";}}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}}s:6:"atLine";i:1415;}i:61;a:7:{s:6:"header";s:38:"function endTag($parser, $name)
+     {";s:11:"parentClass";s:20:"tx_t3locmanager_main";s:4:"cDat";a:3:{s:4:"text";s:17:"
+
+Parser end tag
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:6:"object";i:1;s:11:"&parser	...";}i:1;a:2:{i:0;s:6:"string";i:1;s:10:"$name		...";}}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}}s:7:"content";s:0:"";s:12:"content_size";i:372;s:13:"content_lines";i:14;s:6:"atLine";i:1432;}}}s:14:"MD5_b81f2e66b7";a:4:{s:8:"filename";s:29:"class.tx_t3locmanager_zip.php";s:8:"filesize";i:10881;s:6:"header";N;s:3:"DAT";a:7:{i:1;a:8:{s:6:"header";s:27:"class tx_t3locmanager_zip {";s:5:"class";i:1;s:11:"parentClass";s:19:"tx_t3locmanager_zip";s:4:"cDat";a:4:{s:4:"text";s:401:"
+
+Zip file creation class.
+Makes zip files.
+
+Based on :
+
+ http://www.zend.com/codex.php?id=535&single=1
+ By Eric Mueller <eric@themepark.com>
+
+ http://www.zend.com/codex.php?id=470&single=1
+ by Denis125 <webmaster@atlant.ru>
+
+ a patch from Peter Listiak <mlady@users.sourceforge.net> for last modified
+ date and time of the compressed file
+
+Official ZIP file format: http://www.pkware.com/appnote.txt
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}s:6:"access";s:6:"public";}s:7:"content";s:0:"";s:12:"content_size";i:938;s:13:"content_lines";i:42;s:6:"atLine";i:19;}i:3;a:7:{s:6:"header";s:38:"function unix2DosTime($unixtime = 0) {";s:11:"parentClass";s:19:"tx_t3locmanager_zip";s:4:"cDat";a:4:{s:4:"text";s:150:"
+
+Converts an Unix timestamp to a four byte DOS date and time format (date
+in high two bytes, time in low two bytes allowing magnitude comparison).
+
+
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:26:"the current Unix timestamp";}}s:6:"return";a:2:{i:0;s:7:"integer";i:1;s:42:"the current date in a four byte DOS format";}s:6:"access";s:7:"private";}s:7:"content";s:0:"";s:12:"content_size";i:621;s:13:"content_lines";i:16;s:6:"atLine";i:70;}i:5;a:7:{s:6:"header";s:47:"function addFile($data, $name, $time = 0)
+    {";s:11:"parentClass";s:19:"tx_t3locmanager_zip";s:4:"cDat";a:4:{s:4:"text";s:26:"
+
+Adds "file" to archive
+
+";s:5:"param";a:3:{i:0;a:2:{i:0;s:6:"string";i:1;s:13:"file contents";}i:1;a:2:{i:0;s:6:"string";i:1;s:55:"name of the file in the archive (may contains the path)";}i:2;a:2:{i:0;s:7:"integer";i:1;s:21:"the current timestamp";}}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}s:6:"access";s:6:"public";}s:7:"content";s:0:"";s:12:"content_size";i:3107;s:13:"content_lines";i:68;s:6:"atLine";i:96;}i:7;a:7:{s:6:"header";s:21:"function file()
+    {";s:11:"parentClass";s:19:"tx_t3locmanager_zip";s:4:"cDat";a:4:{s:4:"text";s:18:"
+
+Dumps out file
+
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:15:"the zipped file";}s:6:"access";s:6:"public";}s:7:"content";s:0:"";s:12:"content_size";i:653;s:13:"content_lines";i:14;s:6:"atLine";i:172;}i:9;a:7:{s:6:"header";s:33:"function extractFile($file)     {";s:11:"parentClass";s:19:"tx_t3locmanager_zip";s:4:"cDat";a:4:{s:4:"text";s:179:"
+
+This takes the ZIP file, unzips it, reads all documents, store them in database for next retrieval.
+The file is libunzipped in PATH_site.'typo3temp/' + a randomly named folder.
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:6:"[type]";i:1;s:10:"$file: ...";}}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}s:6:"access";s:7:"private";}s:7:"content";s:0:"";s:12:"content_size";i:1130;s:13:"content_lines";i:24;s:6:"atLine";i:196;}i:11;a:4:{s:6:"header";s:33:"function removeDir($tempDir)    {";s:11:"parentClass";s:19:"tx_t3locmanager_zip";s:4:"cDat";a:4:{s:4:"text";s:102:"
+
+Removes directory with all files from the path $tempDir.
+$tempDir must be a subfolder to typo3temp/
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:6:"[type]";i:1;s:13:"$tempDir: ...";}}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}s:6:"access";s:7:"private";}s:6:"atLine";i:229;}i:13;a:7:{s:6:"header";s:57:"function getAllFilesAndFoldersInPath($fileArr,$extPath) {";s:11:"parentClass";s:19:"tx_t3locmanager_zip";s:4:"cDat";a:4:{s:4:"text";s:58:"
+
+Returns an array with all files and folders in $extPath
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:6:"[type]";i:1;s:13:"$fileArr: ...";}i:1;a:2:{i:0;s:6:"[type]";i:1;s:13:"$extPath: ...";}}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}s:6:"access";s:7:"private";}s:7:"content";s:0:"";s:12:"content_size";i:924;s:13:"content_lines";i:25;s:6:"atLine";i:264;}}}s:14:"MD5_19aaeae789";a:4:{s:8:"filename";s:14:"mod1/index.php";s:8:"filesize";i:17260;s:6:"header";a:5:{s:4:"text";s:57:"
+
+Module 'LocManager' for the 't3_locmanager' extension.
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}s:5:"other";a:1:{i:0;s:57:"@author	Daniel Zielinski <d.zielinski@mx.uni-saarland.de>";}s:11:"other_index";a:1:{s:7:"@author";a:1:{i:0;s:49:"Daniel Zielinski <d.zielinski@mx.uni-saarland.de>";}}}s:3:"DAT";a:7:{i:1;a:7:{s:6:"header";s:52:"class tx_t3locmanager_module1 extends t3lib_SCbase {";s:5:"class";i:1;s:11:"parentClass";s:23:"tx_t3locmanager_module1";s:7:"content";s:0:"";s:12:"content_size";i:18;s:13:"content_lines";i:2;s:6:"atLine";i:42;}i:3;a:7:{s:6:"header";s:17:"function init()	{";s:11:"parentClass";s:23:"tx_t3locmanager_module1";s:4:"cDat";a:3:{s:4:"text";s:2:"
+
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}}s:7:"content";s:0:"";s:12:"content_size";i:222;s:13:"content_lines";i:11;s:6:"atLine";i:48;}i:5;a:7:{s:6:"header";s:23:"function menuConfig()	{";s:11:"parentClass";s:23:"tx_t3locmanager_module1";s:4:"cDat";a:3:{s:4:"text";s:74:"
+
+Adds items to the ->MOD_MENU array. Used for the function menu selector.";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}}s:7:"content";s:0:"";s:12:"content_size";i:421;s:13:"content_lines";i:13;s:6:"atLine";i:65;}i:7;a:7:{s:6:"header";s:17:"function main()	{";s:11:"parentClass";s:23:"tx_t3locmanager_module1";s:4:"cDat";a:3:{s:4:"text";s:66:"
+
+Main function of the module. Write the content to $this->content";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}}s:7:"content";s:0:"";s:12:"content_size";i:440;s:13:"content_lines";i:8;s:6:"atLine";i:84;}i:9;a:6:{s:6:"header";s:25:"function jumpToUrl(URL)	{";s:11:"parentClass";s:23:"tx_t3locmanager_module1";s:7:"content";s:0:"";s:12:"content_size";i:1771;s:13:"content_lines";i:48;s:6:"atLine";i:105;}i:11;a:4:{s:6:"header";s:25:"function printContent()	{";s:11:"parentClass";s:23:"tx_t3locmanager_module1";s:4:"cDat";a:3:{s:4:"text";s:28:"
+
+Prints out the module HTML";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}}s:6:"atLine";i:159;}i:13;a:7:{s:6:"header";s:26:"function moduleContent()	{";s:11:"parentClass";s:23:"tx_t3locmanager_module1";s:4:"cDat";a:3:{s:4:"text";s:30:"
+
+Generates the module content";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}}s:7:"content";s:0:"";s:12:"content_size";i:11762;s:13:"content_lines";i:278;s:6:"atLine";i:170;}}}s:14:"MD5_d501e19005";a:4:{s:8:"filename";s:43:"modfunc1/class.tx_t3locmanager_modfunc1.php";s:8:"filesize";i:2303;s:6:"header";a:5:{s:4:"text";s:95:"
+
+Module extension (addition to function menu) 'LocManager' for the 't3_locmanager' extension.
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}s:5:"other";a:1:{i:0;s:57:"@author	Daniel Zielinski <d.zielinski@mx.uni-saarland.de>";}s:11:"other_index";a:1:{s:7:"@author";a:1:{i:0;s:49:"Daniel Zielinski <d.zielinski@mx.uni-saarland.de>";}}}s:3:"DAT";a:2:{i:1;a:4:{s:6:"header";s:57:"class tx_t3locmanager_modfunc1 extends t3lib_extobjbase {";s:5:"class";i:1;s:11:"parentClass";s:24:"tx_t3locmanager_modfunc1";s:6:"atLine";i:32;}i:3;a:6:{s:6:"header";s:17:"function main()	{";s:11:"parentClass";s:24:"tx_t3locmanager_modfunc1";s:7:"content";s:0:"";s:12:"content_size";i:936;s:13:"content_lines";i:21;s:6:"atLine";i:46;}}}s:14:"MD5_ae0ea69cd3";a:4:{s:8:"filename";s:13:"cm1/index.php";s:8:"filesize";i:18035;s:6:"header";a:5:{s:4:"text";s:137:"
+
+t3_locmanager module cm1
+This class holds some functions used in the TYPO3 backend for exporting and re-importing localizable data
+$Id$";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}s:5:"other";a:1:{i:0;s:57:"@author Daniel Zielinski <d.zielinski@mx.uni-saarland.de>";}s:11:"other_index";a:1:{s:7:"@author";a:1:{i:0;s:49:"Daniel Zielinski <d.zielinski@mx.uni-saarland.de>";}}}s:3:"DAT";a:6:{i:1;a:7:{s:6:"header";s:48:"class tx_t3locmanager_cm1 extends t3lib_SCbase {";s:5:"class";i:1;s:11:"parentClass";s:19:"tx_t3locmanager_cm1";s:7:"content";s:0:"";s:12:"content_size";i:2;s:13:"content_lines";i:0;s:6:"atLine";i:80;}i:3;a:7:{s:6:"header";s:23:"function menuConfig() {";s:11:"parentClass";s:19:"tx_t3locmanager_cm1";s:4:"cDat";a:3:{s:4:"text";s:74:"
+
+Adds items to the->MOD_MENU array. Used for the function menu selector.
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}}s:7:"content";s:0:"";s:12:"content_size";i:269;s:13:"content_lines";i:12;s:6:"atLine";i:86;}i:5;a:7:{s:6:"header";s:17:"function main() {";s:11:"parentClass";s:19:"tx_t3locmanager_cm1";s:4:"cDat";a:3:{s:4:"text";s:67:"
+
+Main function of the module. Write the content to $this->content
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:26:"$content	Content of module";}}s:7:"content";s:0:"";s:12:"content_size";i:599;s:13:"content_lines";i:12;s:6:"atLine";i:104;}i:7;a:6:{s:6:"header";s:25:"function jumpToUrl(URL) {";s:11:"parentClass";s:19:"tx_t3locmanager_cm1";s:7:"content";s:0:"";s:12:"content_size";i:1604;s:13:"content_lines";i:39;s:6:"atLine";i:118;}i:9;a:4:{s:6:"header";s:25:"function printContent() {";s:11:"parentClass";s:19:"tx_t3locmanager_cm1";s:4:"cDat";a:3:{s:4:"text";s:23:"
+
+Print module content
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:14:"Module content";}}s:6:"atLine";i:163;}i:11;a:7:{s:6:"header";s:26:"function moduleContent() {";s:11:"parentClass";s:19:"tx_t3locmanager_cm1";s:4:"cDat";a:3:{s:4:"text";s:26:"
+
+Generate module content
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}}s:7:"content";s:0:"";s:12:"content_size";i:11651;s:13:"content_lines";i:273;s:6:"atLine";i:174;}}}}}

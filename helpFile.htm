@@ -1,0 +1,94 @@
+<html>
+<head>
+	<title>T3 LocManager Help</title>
+	<link rel="stylesheet" type="text/css" href="/typo3_src/typo3/stylesheet.css" />
+</head>
+    <body>
+		<div align="center"><img src="/typo3conf/ext/t3_locmanager/logo-typo3.gif" alt="TYPO3" /></div>
+		<h1>T3 LocManager Help</h1>
+		<div id="export">
+			<h2>Export</h2>
+			<p>
+			Allows you to export localisable data from the database tables (pages, pages_language_overlay, tt_content) so that you can translate it with an external translation tool such as SDL TagEditor or PASSOLO. Export is done in an XML format that can be easily imported into most CAT-Tools or software localization tools. After translation you can reimport the localised file and localised pages will be automatically generated and content inserted. See <a href="#import">Import</a> for more information.
+			</p>
+		</div>
+		<div id="startPid">
+			<h3>Start page ID</h3>
+			<p>
+			Indicates the ID of the page where T3 LocManager should start exporting.
+			</p>
+		</div>
+		<div id="recursion">
+			<h3>Recursion</h3>
+			<p>
+			By checking the <b>Export recursively</b> option T3 LocManager will export all pages and content elements under the selected starting point.
+			</p>
+		</div>
+		<div id="tidy">
+			<h3>Tidy</h3>
+			<p>
+			HTML Tidy is an open source program and library for checking and generating clean XHTML/HTML. If the <b>Tidy</b> option is checked T3 LocManager will check content from TYPO3 for X/HTML validity and allow for XML compatible export. 
+			</p>
+		</div>
+		<div id="ignHidden">
+			<h3>Ignore hidden</h3>
+			<p>
+			The user is given the possibility to ignore hidden pages and hidden content elements while exporting. So hidden elements (mostly elements still under development) will not be translated.
+			</p>
+		</div>
+		<div id="ignDel">
+			<h3>Ignore deleted</h3>
+			<p>
+			Deleted pages and content elements will never be exported.
+			</p>
+		</div>
+		<div id="ignLoc">
+			<h3>Ignore localized</h3>
+			<p>
+			When exporting T3 LocManager checks if the pages or content elements to be exported have already been translated. If it detects already localized elements T3 LocManager stops giving the warning that some elements are already localized. The user then has the option to uncheck the option <b>ignore localized ...</b>.
+			</p>
+		</div>
+		<div id="overwrite">
+			<h3>Overwrite</h3>
+			<p>
+			Various overwrite options can be set, e.g. to overwrite a localization package, when exporting an updated version.
+			</p>
+		</div>
+		<div id="locPageTypes">
+			<h3>Localizable page types</h3>
+			<p>
+			Are the localizable page types. Different types can be selected to adapt the export and translation process to the users' needs.
+			</p>
+		</div>
+		<div id="locCeTypes">
+			<h3>Localizable content elements</h3>
+			<p>
+			Are the localizable content element types. Different types can be selected to adapt the export and translation process to the users' needs.
+			</p>
+		</div>
+		<div id="locFields">
+			<h3>Localizable fields</h3>
+			<p>
+			Are the localizable database fields. Different fields can be selected to adapt the export and translation process to the users' needs.
+			</p>
+		</div>
+		<div id="passolo">
+			<h3>PASSOLO *.xfg</h3>
+			<p>
+			T3 LocManager allows for automatic generation of a PASSOLO *.xfg file that contains the required XML rules. The rules are dynamically build according to the options defined by the user. The *.xfg file can be directly imported into PASSOLO. If you want to include the PASSOLO *.xfg file in the localization package check PASSOLO *.xfg from the <b>General        </b> tab in the export options.
+			</p>
+		</div>
+		<div id="sdl">
+			<h3>SDL TRADOS *.ini</h3>
+			<p>
+			T3 LocManager allows for automatic generation of a SDL TRADOS *.ini file that contains the required tag settings for the translation. The *.ini file is dynamically build according to the options defined by the user. If you want to include the SDL TRADOS *.ini file in the localization package check SDL TRADOS *.ini from the <b>General</b> tab in the export options. The *.ini file will then be added to the *.zip file. 
+			</p>
+		</div>
+		<div id="import">
+			<h2>Import</h2>
+			<p>
+			Allows for import of translated files that have been previously exported with T3 LocManager. On import new localized pages will be automatically inserted into the database tables. Various options and automatic checks allow user-defined import. See options <a href="#setHidden">set status to hidden</a>, <a href="#overwrite">overwrite</a>, and <a href="#remove">remove</a>.
+			</p>
+		</div>
+    </body>
+</html>

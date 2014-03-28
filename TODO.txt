@@ -1,0 +1,18 @@
+TODO
+
+...a lot
+
+- XML parsing is quite dirty using DOMXML and expat parser. 
+- Performance tuning on import
+- Better localization overview (Who checked out what when...?)
+- Delete files from Localization information after successful import
+- Support for updating mechanism (What's new, changes in Pages and Content Elements)
+- Support for status handling (Checked out, checked in, proofread, ...)
+- How to handle localization of user-specific extension content data not stored in tt_content?
+- Code abstraction
+- Function indexes
+- Support for ACROSS config files
+- Readme for localization with PASSOLO 6
+
+-... more to come with further testing
+
