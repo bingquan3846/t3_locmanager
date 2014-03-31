@@ -657,9 +657,7 @@ class tx_t3locmanager_main extends t3lib_SCbase {
 			}*/
             $i = 0;
             foreach ($GLOBALS['TCA'][$table]['columns'] as $fieldName => $fieldValue) {
-                if($fieldName == "tx_templavoila_flex" || $fieldName == "pi_flexform"){
-                    continue;
-                }
+
                 $fieldInfoArr[$i]['name'] = $fieldName;
                 $fieldInfoArr[$i]['length'] = 255;
                 $fieldInfoArr[$i]['type'] = $fieldValue['config']['type'];
@@ -891,6 +889,8 @@ class tx_t3locmanager_main extends t3lib_SCbase {
 					for ($key = 0, $size = count($fieldInfoArr); $key < $size; $key++) {
 						$data[$field] = $dataSet->appendChild($dom->createElement($fieldInfoArr[$key]['name']));
 						$data[$field]->setAttribute('type', $fieldInfoArr[$key]['type']);
+                        $row[$fieldInfoArr[$key]['name']] = htmlentities($row[$fieldInfoArr[$key]['name']]);
+
 						if (array_search($fieldInfoArr[$key]['name'], $locFields) !== FALSE) {
 							$data[$field]->setAttribute('max-len', $fieldInfoArr[$key]['length']);
 							$data[$field]->setAttribute('localizable', '1');
@@ -899,6 +899,8 @@ class tx_t3locmanager_main extends t3lib_SCbase {
 							// Substitute &
 							$content = preg_replace('/&nbsp;/s', ' ', $content);
 							$content = preg_replace('/&/s', '&amp;', $content);
+                            $content = htmlentities($content);
+
 							if ($fieldInfoArr[$key]['name'] == 'bodytext') {
 
 
@@ -1814,6 +1816,7 @@ class tx_t3locmanager_main extends t3lib_SCbase {
 						foreach ($text_nodes as $text) {
                             //var_dump ($text);
 							if ($text->nodeType == XML_ELEMENT_NODE) {
+                                $text->nodeValue = html_entity_decode($text->nodeValue);
 								if ($text->nodeName == 'CType') {
 									$cType=$text->nodeValue;
 								}
